@@ -1,0 +1,15 @@
+package service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+ 
+import repository.list_pemakai_kontrasepsiRepository;
+@Service
+@Transactional
+
+public class list_pemakaiService {
+	
+	@Autowired
+    private list_pemakai_kontrasepsiRepository repo;
+}

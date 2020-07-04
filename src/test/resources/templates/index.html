@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Propinsi</title>
+</head>
+<body>
+<div align="center">
+    <h1>List Propinsi</h1>
+    <a href="/new">Create new Propinsi</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>ID Propinsi</th> 
+                <th>Nama Propinsi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="List_Propinsi : ${listlist_propinsi}">
+                <td th:text="${List_Propinsi.id_propinsi}">ID Propinsi</td>
+                <td th:text="${List_Propinsi.nama_propinsi}">Nama Propinsi</td>
+                <td>
+                    <a th:href="/@{'/edit/' + ${List_Propinsi.id_propinsi}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="/@{'/delete/' + ${List_Propinsi.id_propinsi}}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>
